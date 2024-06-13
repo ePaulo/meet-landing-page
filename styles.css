@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px dashed red;
+}
+
+:root {
+  --primary-color--hippie-blue: #4d96a9;
+  --primary-color--deluge: #855fb1;
+  --primary-color--ebony-clay: #28283d;
+  --primary-color--manatee: #87879d;
+  --primary-color--malibu: #8fe3f9;
+  --primary-color--mauve: #d9b8ff;
+  --primary-color--alabaster: #fafafa;
+
+  --secondary-color--black: #000;
+  --secondary-color--white: #fff;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-color--alabaster);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--primary-color--ebony-clay);
+  line-height: 4.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color--hippie-blue);
+  line-height: 2.6rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+/* - - - - - - - buttons - - - - - - - */
+
+button {
+  width: 193px;
+  height: 58px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 29px;
+  color: var(--secondary-color--white);
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+button.btn1 {
+  background-color: var(--primary-color--hippie-blue);
+
+  &:hover {
+    background-color: var(--primary-color--malibu);
+  }
+}
+
+button.btn2 {
+  background-color: var(--primary-color--deluge);
+
+  &:hover {
+    background-color: var(--primary-color--mauve);
+  }
+}
+
+/* - - - - - - - app container - - - - - - - */
+
+div.container {
+  width: 375px;
+  margin: 0 auto;
+  background-color: var(--secondary-color--white);
+  text-align: center;
+}
+
+/* - - - - - - - divider between sections - - - - - - - */
+
+div.divider {
+  position: static;
+  width: 56px;
+  height: 140px;
+  background: linear-gradient(
+      var(--primary-color--manatee),
+      var(--primary-color--manatee)
+    )
+    no-repeat top/1px 84px;
+  opacity: 0.25;
+
+  p {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color--manatee);
+    color: var(--secondary-color--black);
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 56px;
+
+    display: block;
+    position: relative;
+    top: 84px;
+  }
+}
+
+/* 
+  - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ========== Header ========== */
+
+header {
+  img {
+    width: 119px;
+    height: 28px;
+    margin: 4.8em;
+  }
+}
+
+/* ========== Main block ========== */
+
+main {
+  /* ---------- Hero Section ---------- */
+
+  section.hero {
+    position: static;
+    overflow: hidden;
+
+    div.avatars {
+      position: relative;
+      left: -20px;
+      width: 414px;
+
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h1 {
+      width: 327px;
+      margin: 1.5em auto 0.75em;
+      padding: 0 0.75em;
+      color: var(--secondary-color--black);
+      font-size: 4rem;
+      line-height: 1.1em;
+    }
+
+    p {
+      width: 327px;
+      margin: 0.75em auto 2em;
+      color: var(--primary-color--manatee);
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+
+    button {
+      margin-bottom: 1.25em;
+    }
+  }
+
+  /* ---- ----  divider #1  ---- ---- */
+
+  div.divider#div01 {
+    margin: 5em auto;
+  }
+
+  /* ---------- Images Section ---------- */
+
+  section.images {
+    width: 327px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    img {
+      width: 151px;
+      height: 143px;
+    }
+  }
+
+  /* ---------- Content Section ---------- */
+
+  section.content {
+    width: 327px;
+    height: 284px;
+    margin: 6em auto;
+  }
+
+  /* ---- ----  divider #2  ---- ---- */
+
+  div.divider#div02 {
+    margin: 5em auto;
+  }
+
+  /* ---------- Connect Section ---------- */
+
+  section.connect {
+  }
+}
+
+footer.attribution {
+  margin: 1.5em auto;
+  font-size: 1.2rem;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
