@@ -234,10 +234,6 @@ main {
     margin: -2.5em auto 0;
     z-index: 2;
     opacity: 0.8;
-
-    p {
-      /* opacity: 0.35; */
-    }
   }
 
   /* ---------- Connect Section ---------- */
@@ -249,7 +245,6 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* z-index: 1; */
 
     div.overlay {
       width: 100%;
@@ -270,6 +265,12 @@ main {
         color: var(--primary-color--alabaster);
         font-size: 1.8rem;
         line-height: 2.6rem;
+      }
+
+      button {
+        span {
+          color: var(--primary-color--mauve);
+        }
       }
     }
   }
