@@ -18,8 +18,10 @@
 
   --secondary-color--black: #000;
   --secondary-color--white: #fff;
+}
 
-  font-size: 62.5%;
+html {
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
@@ -27,7 +29,7 @@ body {
   font-family: 'Red Hat Display', sans-serif;
 }
 
-/* - - - - - - - buttons - - - - - - - */
+/* - - - - - - - general button styling - - - - - - - */
 
 button {
   width: 193px;
@@ -63,16 +65,7 @@ button.btn2 {
   }
 }
 
-/* - - - - - - - app container - - - - - - - */
-
-div.container {
-  width: 375px;
-  margin: 0 auto;
-  background-color: var(--secondary-color--white);
-  text-align: center;
-}
-
-/* - - - - - - - divider between sections - - - - - - - */
+/* - - - - - - - general divider styling - - - - - - - */
 
 div.divider {
   position: static;
@@ -103,10 +96,19 @@ div.divider {
 }
 
 /* 
-  - - - - - - - - - - - - - - - - - - - - - - 
-  - - - - - - - - - - - - - - - - - - - - - - 
+  - - - - - - - - - - - - - - - - - -
+  ---------- Mobile First -----------
+  - - - - - - - - - - - - - - - - - -
 */
 
+/* = = = = = app container = = = = = */
+
+div.container {
+  width: 375px;
+  margin: 0 auto;
+  background-color: var(--secondary-color--white);
+  text-align: center;
+}
 /* ========== Header ========== */
 
 header {
@@ -196,7 +198,6 @@ main {
 
   section.content {
     width: 327px;
-    height: 284px;
     margin: 6em auto;
 
     h3 {
@@ -209,7 +210,7 @@ main {
     }
 
     h2 {
-      margin: 0.6em auto 0.9em;
+      margin: 0.6em auto 0.95em;
       padding: 0 1.5rem;
       color: var(--primary-color--ebony-clay);
       font-size: 3.2rem;
@@ -239,7 +240,7 @@ main {
   /* ---------- Connect Section ---------- */
 
   section.connect {
-    width: 375px;
+    width: 100%;
     height: 440px;
     background-image: url('./assets/mobile/image-footer.jpg');
     background-size: cover;
@@ -283,5 +284,218 @@ footer.attribution {
 
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+/* 
+  - - - - - - - - - - - - - - - - - -
+  ---------- Tablet Styles -----------
+  - - - - - - - - - - - - - - - - - -
+*/
+@media (min-width: 820px) {
+  div.container {
+    width: 768px;
+  }
+
+  /* ========== Main block ========== */
+
+  main {
+    /* ---------- Hero Section ---------- */
+
+    section.hero {
+      div.avatars {
+        width: 820px;
+      }
+
+      h1 {
+        width: 339px;
+        margin-top: 1.5em;
+        padding: 0;
+        font-size: 4.8rem;
+        line-height: 1;
+      }
+
+      p {
+        width: 457px;
+        padding: 0 1em;
+      }
+    }
+
+    /* ---- ----  divider #1  ---- ---- */
+
+    div.divider#div01 {
+      margin: 7em auto;
+      opacity: 0.4 !important;
+    }
+
+    /* ---------- Images Section ---------- */
+
+    section.images {
+      width: 689px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: unset;
+
+      img {
+        width: 164px;
+        height: 156px;
+      }
+    }
+
+    /* ---------- Content Section ---------- */
+
+    section.content {
+      width: 573px;
+      margin-bottom: 8em;
+
+      h2 {
+        margin: 0.35em auto 0.8em;
+        padding: 0 64px;
+        font-size: 4rem;
+        line-height: 4.4rem;
+      }
+
+      p {
+        letter-spacing: 0;
+      }
+    }
+
+    /* ---- ----  divider #2  ---- ---- */
+
+    div.divider#div02 {
+      opacity: 0.5 !important;
+    }
+
+    /* ---------- Connect Section ---------- */
+
+    section.connect {
+      height: 428px;
+      background-image: url('./assets/tablet/image-footer.jpg');
+
+      div.overlay {
+        h2 {
+          width: 457px;
+          margin: 0 auto;
+          padding-top: 2.3em;
+          font-size: 4rem;
+          line-height: 4.4rem;
+        }
+
+        p {
+          width: 573px;
+          margin: 1.75em auto 2.1em;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+/* 
+  - - - - - - - - - - - - - - - - - - -
+  ---------- Desktop Styles -----------
+  - - - - - - - - - - - - - - - - - - -
+*/
+@media (min-width: 1504px) {
+  div.container {
+    width: 1440px;
+  }
+
+  /* ========== Main block ========== */
+
+  main {
+    /* ---------- Hero Section ---------- */
+
+    section.hero {
+      div.avatars {
+        width: 1440px;
+      }
+
+      h1 {
+        width: 600px;
+        margin-top: 1.5em;
+        font-size: 5.6rem;
+        line-height: 1;
+      }
+
+      p {
+        width: 600px;
+        padding: 0 1em;
+      }
+    }
+
+    /* ---- ----  divider #1  ---- ---- */
+
+    div.divider#div01 {
+      margin: 7em auto;
+      opacity: 0.4 !important;
+    }
+
+    /* ---------- Images Section ---------- */
+
+    section.images {
+      width: 1200px;
+      margin: 0 auto;
+
+      img {
+        width: 280px;
+        height: 266px;
+      }
+    }
+
+    /* ---------- Content Section ---------- */
+
+    section.content {
+      width: 1000px;
+      margin-bottom: 8em;
+
+      h2 {
+        margin: 0.35em auto 0.8em;
+        padding: 0 64px;
+        font-size: 4.8rem;
+        line-height: 5.2rem;
+      }
+
+      p {
+        width: 1000px;
+        margin: 0.5em auto 1.5em;
+        padding: 0;
+      }
+    }
+
+    /* ---- ----  divider #2  ---- ---- */
+
+    div.divider#div02 {
+      opacity: 0.5 !important;
+    }
+
+    /* ---------- Connect Section ---------- */
+
+    section.connect {
+      height: 428px;
+      background-image: url('./assets/desktop/image-footer.jpg');
+
+      div.overlay {
+        h2 {
+          width: 1000px;
+          margin: 0 auto;
+          padding-top: 2.3em;
+          font-size: 4.8rem;
+          line-height: 5.2rem;
+        }
+
+        p {
+          width: 1000px;
+          margin: 1.75em auto 2.1em;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  footer.attribution {
+    margin: 2em auto;
   }
 }
