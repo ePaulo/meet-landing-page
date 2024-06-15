@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px dashed red; */
+  outline: 1px dashed red;
 }
 
 :root {
@@ -109,6 +109,7 @@ div.container {
   background-color: var(--secondary-color--white);
   text-align: center;
 }
+
 /* ========== Header ========== */
 
 header {
@@ -128,15 +129,23 @@ main {
     position: static;
     overflow: hidden;
 
-    div.avatars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div.avatars.mobile-design {
       position: relative;
-      left: -20px;
       width: 414px;
 
       img {
         width: 100%;
         height: auto;
       }
+    }
+
+    div.avatars.desktop-design {
+      display: none;
     }
 
     h1 {
@@ -303,7 +312,7 @@ footer.attribution {
     /* ---------- Hero Section ---------- */
 
     section.hero {
-      div.avatars {
+      div.avatars.mobile-design {
         width: 820px;
       }
 
@@ -401,6 +410,7 @@ footer.attribution {
 @media (min-width: 1504px) {
   div.container {
     width: 1440px;
+    overflow: hidden;
   }
 
   /* ========== Main block ========== */
@@ -409,20 +419,42 @@ footer.attribution {
     /* ---------- Hero Section ---------- */
 
     section.hero {
-      div.avatars {
-        width: 1440px;
+      width: 1504px;
+      /* width: 100%; */
+      flex-direction: row;
+
+      div.avatars.mobile-design {
+        display: none;
+      }
+
+      div.avatars.desktop-design {
+        display: inline-block;
+        width: 394px;
+        /* margin: 0 auto; */
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        &#avatars-left {
+          position: relative;
+          left: -52px;
+        }
       }
 
       h1 {
-        width: 600px;
-        margin-top: 1.5em;
-        font-size: 5.6rem;
+        width: 445px;
+        margin: 0.8em auto 0.6em;
+        font-size: 6.4rem;
         line-height: 1;
       }
 
       p {
-        width: 600px;
-        padding: 0 1em;
+        width: 540px;
+        margin: 0 3.4em 2em;
+        padding: 0 0.25em;
+        font-size: 1.8rem;
       }
     }
 
@@ -494,8 +526,8 @@ footer.attribution {
       }
     }
   }
+}
 
-  footer.attribution {
-    margin: 2em auto;
-  }
+footer.attribution {
+  margin: 2em auto;
 }
